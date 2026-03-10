@@ -1,0 +1,39 @@
+1. system for serving
+
+2. student:
+●
+Name — Character string of random length
+●
+Faculty number
+● validation
+Currently enrolled course, specialty(enum), group
+●
+Status (Recorded, Interrupted, Completed)
+●enum
+Average grade from study to date
+
+3. Academic disciplines
+name and type (compulsory/elective
+
+
+4. For each specialty, there is a list of disciplines and a course in which they can be enrolled,
+and for simplicity, you can assume that each discipline can be enrolled only within exactly one course.
+
+5. .... (read, write etc.)
+open, close, save, save as, help and exit
+
+
+End summary
+For each student, all enrolled disciplines and grades in those of them in which exams have been taken
+ are kept.
+●
+add grades/exams (for a subject, grade and student)
+●
+Enrollment of compulsory/elective subjects
+●
+Printing of protocols
+●
+Academic transcript of a student's grades (a list of all exams taken, the corresponding grades
+and the student's grades). A list of exams not taken should also be included
+(subjects that are enrolled, but there are no grades for them, they should be
+included in the calculation of the student's average grade as pairs), if any.
