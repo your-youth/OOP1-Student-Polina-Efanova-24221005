@@ -12,8 +12,11 @@ Status (Recorded, Interrupted, Completed)
 ●enum
 Average grade from study to date
 
+
 3. Academic disciplines
-name and type (compulsory/elective
+name and type (compulsory/elective)
+
+3.1 spetiality
 
 
 4. For each specialty, there is a list of disciplines and a course in which they can be enrolled,
@@ -37,3 +40,14 @@ Academic transcript of a student's grades (a list of all exams taken, the corres
 and the student's grades). A list of exams not taken should also be included
 (subjects that are enrolled, but there are no grades for them, they should be
 included in the calculation of the student's average grade as pairs), if any.
+
+
+//student(spetiality)
+spetiality (list<>)
+discipline
+
+Map<discipline,mark(list<mark>)>
+
+Book Set<Student>
+
+все команды должы быть объектом enroll <fn>, <progam> and etc
