@@ -1,7 +1,7 @@
 package enums;
 
 public enum Status {
-    ENROLLED,
+    RECORDED,
     INTERRUPTED,
-    GRADUATED;
+    COMPLETED
 }

@@ -14,7 +14,7 @@ public class Student {
     private Specialty specialty;
     private int group;
     private Status status;
-    private Map<Discipline, Double> enrolledDisciplines;
+    private Map<Discipline, Double> recordedDisciplines;
 
     public Student(String firstName, String lastName, int facultyNumber, int year, Specialty specialty, int group) {
         this.firstName = firstName;
@@ -23,8 +23,8 @@ public class Student {
         this.course = 1;
         this.specialty = specialty;
         this.group = group;
-        this.status = Status.ENROLLED;
-        this.enrolledDisciplines = new HashMap<>();
+        this.status = Status.RECORDED;
+        this.recordedDisciplines = new HashMap<>();
     }
 
     public String getFirstName() {
@@ -56,7 +56,7 @@ public class Student {
     }
 
     public Map<Discipline, Double> getEnrolledDisciplines() {
-        return enrolledDisciplines;
+        return recordedDisciplines;
     }
 
     public void setYear(int year) {
@@ -75,20 +75,20 @@ public class Student {
         this.status = status;
     }
 
-    public void enrolledDisciplines(Discipline discipline){
-        enrolledDisciplines.put(discipline, null);
+    public void setRecordedDisciplines(Discipline discipline){
+        recordedDisciplines.put(discipline, null);
     }
     public void addGraduate(Discipline discipline, double grade){
-        enrolledDisciplines.put( discipline, grade);
+        recordedDisciplines.put( discipline, grade);
     }
 
     public double calculateAverage() {
-        if (enrolledDisciplines.isEmpty()) return 0;
+        if (recordedDisciplines.isEmpty()) return 0;
         double sum = 0;
-        for (Double grade : enrolledDisciplines.values()) {
+        for (Double grade : recordedDisciplines.values()) {
             sum += (grade != null) ? grade : 2.0;
         }
-        return sum / enrolledDisciplines.size();
+        return sum / recordedDisciplines.size();
     }
 
     @Override
@@ -101,7 +101,7 @@ public class Student {
                 ", specialty=" + specialty +
                 ", group=" + group +
                 ", status=" + status +
-                ", enrolledDisciplines=" + enrolledDisciplines +
+                ", enrolledDisciplines=" + recordedDisciplines +
                 '}';
     }
 }
