@@ -51,3 +51,5 @@ Map<discipline,mark(list<mark>)>
 Book Set<Student>
 
 все команды должы быть объектом enroll <fn>, <progam> and etc
+
+обработка исключений и ошибок
